@@ -1,19 +1,17 @@
 import { CreateTodo } from "./CreateTodo"
+import Logo from "./icons/Logo"
 
 interface Props {
-    onAddTodo: (title: string) => void;
+  onAddTodo: (title: string) => void
 }
 
 export const Header: React.FC<Props> = ({ onAddTodo }) => {
-    return(
+  return (
         <header className="header">
-            <h1>Todolist <img
-            style={{width: '60px', height:'auto' }}
-            src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png'
-            /></h1>
+            <h1 style={{ color: '#3f4b88', marginBottom: '20px' }}>Todolist  <Logo /></h1>
 
             <CreateTodo saveTodo={onAddTodo} />
 
         </header>
-    )
+  )
 }
